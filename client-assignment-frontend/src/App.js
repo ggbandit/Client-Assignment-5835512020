@@ -3,16 +3,16 @@ import {connect} from 'react-redux'
 import Footer from './Footer.js'
 import './App.css'
 import {
-  changeUser,
-  fetchUser,
-  createUser,
-  deleteUser,
-  updateUser
+  changeCurriculums,
+  fetchCurriculums,
+  createCurriculums,
+  deleteCurriculums,
+  updateCurriculums
 } from './actions'
 
 class App extends Component {
   componentDidMount() {
-    this.props.fetchUser()
+    this.props.fetchCurriculums()
   }
 
   state = {
@@ -28,11 +28,11 @@ class App extends Component {
 
   }
   handleSubmit = () => {
-    this.props.createUser(this.state);
+    this.props.createCurriculums(this.state);
   }
   handleDelete = (e) => {
     const {id} = e.target;
-    this.props.deleteUser(id);
+    this.props.deleteCurriculums(id);
   }
   handletoEditform = (e) => {
     const {id} = e.target;
@@ -55,7 +55,7 @@ class App extends Component {
       name: userName,
     };
     const id = userId
-    this.props.updateUser(id, user)
+    this.props.updateCurriculums(id, user)
   }
   render() {
     const {userlist} = this.props.users;
@@ -106,4 +106,4 @@ const mapStateToProps = ({users}) => {
    users,
  }
 }
-export default connect(mapStateToProps, {changeUser, fetchUser, createUser, deleteUser, updateUser})(App);
+export default connect(mapStateToProps, {changeCurriculums, fetchCurriculums, createCurriculums, deleteCurriculums, updateCurriculums})(App);

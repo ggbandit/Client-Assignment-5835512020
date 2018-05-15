@@ -1,4 +1,4 @@
-import {CHANGE_USER, FETCH_USERS} from "../actions/index"
+import {CHANGE_CURRICULUMS, FETCH_CURRICULUMS} from "../actions/index"
 
 const initalState ={
   userlist:[]
@@ -7,9 +7,9 @@ const initalState ={
 export default (state=initalState,action)=>{
   switch (action.type){
     case
-      CHANGE_USER:
+      CHANGE_CURRICULUMS:
       return state,action.payload;
-    case FETCH_USERS:
+    case FETCH_CURRICULUMS:
       return {...state,userlist:action.payload.data}
     default:
       return state;
