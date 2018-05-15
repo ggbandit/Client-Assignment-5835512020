@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+.edit-button {
+    position:fixed;
+    left: 450px;
+}
+
+.delete-button {
+    position:fixed;
+    left: 500px;
+}
+
+.mg-left{
+  margin-left: 5px;
+}
+
+.App-header {
+  background-color: #42A5F5;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.App-title {
+  margin-top: 2.0em;
+  font-size: 2.0em;
+}
+
+.App-intro {
+  font-size: large;
+  padding: 10px;
+}
+
+.bg-body{
+  background-color: #80d6ff;
+  height: auto;
+}
+
+.bg-footer{
+  background-color: #c3fdff;
+  height: 150px;
+  padding-top: 20px;
+}
